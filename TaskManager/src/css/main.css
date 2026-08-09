@@ -76,3 +76,19 @@ header nav  .logo{
     justify-self: flex-end !important;
     align-self: center;
 }
+
+.container .TasksBox{
+    width: 900px;
+    height: 600px;
+    background-color: #1478ca55;
+    border-radius: 80px;
+    border: 4px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    backdrop-filter: blur(100%);
+}
+
+.container .TasksBox:hover{
+    transform: translateY(-1%);
+}
