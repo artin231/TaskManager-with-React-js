@@ -1,5 +1,6 @@
 import { useContext } from "react"
 import { TaskContext } from "../context/TaskContext"
+import TaskItem from "./TaskItem";
 
 let TaskList = () => {
     let data = useContext(TaskContext);
@@ -14,12 +15,7 @@ let TaskList = () => {
             </div>
             <ul className="ListOfTasks">
                 {data.ListTask.map((i,h) => {
-                    return (<li>
-                        {i.finised==true ? <input type="checkbox" key={h} name="" id="" checked />:<input type="checkbox" name="" id="" />}
-                        
-                        <h1>{i.name}</h1>
-                        
-                    </li>)
+                    return (<TaskItem i={i} h={h}/>)
                 })}
             </ul>
         </div>
