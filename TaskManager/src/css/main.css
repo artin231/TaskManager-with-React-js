@@ -76,7 +76,7 @@ header nav  .logo{
     justify-self: flex-end !important;
     align-self: center;
 }
-
+.container .AboutBox,
 .container .TasksBox{
     width: 900px;
     height: 600px;
@@ -89,6 +89,10 @@ header nav  .logo{
     backdrop-filter: blur(100%);
 }
 
-.container .TasksBox:hover{
+.container .TasksBox:hover,.container .AboutBox:hover{
     transform: translateY(-1%);
+}
+
+.container .AboutBox{
+    text-align: center;
 }
