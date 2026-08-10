@@ -1,14 +1,12 @@
 import Header from "../components/Header"
+import TaskList from "../components/TaskList"
 import '../css/main.css'
 
 let HomePage = () => {
     return (
         <div className="container">
             <Header />
-            <div className="TasksBox">
-                <h1>تسک ها</h1>
-
-            </div>
+            <TaskList />
         </div>
 
     )

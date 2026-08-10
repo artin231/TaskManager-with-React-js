@@ -34,6 +34,7 @@ header {
     top: 2.5;
     overflow: auto;
 }
+
 header nav {
     width: 100%;
     height: 100%;
@@ -71,13 +72,14 @@ header nav ul li a img {
     width: 40px;
 }
 
-header nav  .logo{
+header nav .logo {
     width: 50px;
     justify-self: flex-end !important;
     align-self: center;
 }
+
 .container .AboutBox,
-.container .TasksBox{
+.container .TasksBox {
     width: 900px;
     height: 600px;
     background-color: #1478ca55;
@@ -87,12 +89,53 @@ header nav  .logo{
     flex-direction: column;
     align-items: center;
     backdrop-filter: blur(100%);
+    gap: 20px;
 }
 
-.container .TasksBox:hover,.container .AboutBox:hover{
+.container .TasksBox:hover,
+.container .AboutBox:hover {
     transform: translateY(-1%);
 }
 
-.container .AboutBox{
+.container .AboutBox {
     text-align: center;
+}
+
+.container .TasksBox .AddPlace {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+
+.container .TasksBox .AddPlace .InputAdd {
+    width: 80%;
+    height: 50px;
+    border-radius: 10px;
+    background-color: transparent;
+    border: 3px solid black;
+    outline: none;
+    color: white;
+    direction: rtl;
+    font-size: 30px;
+}
+
+.container .TasksBox .AddPlace .InputAdd::placeholder {
+    color: rgba(240, 248, 255, 0.807);
+}
+
+.container .TasksBox .AddPlace button {
+    width: 400px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.028);
+    border: 3px solid black;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    cursor: pointer;
 }
