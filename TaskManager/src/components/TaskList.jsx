@@ -14,8 +14,8 @@ let TaskList = () => {
                 <button>ثبت اطلاعات</button>
             </div>
             <ul className="ListOfTasks">
-                {data.ListTask.map((i,h) => {
-                    return (<TaskItem i={i} h={h}/>)
+                {data.ListTask.map((i) => {
+                    return (<TaskItem i={i} h={i.id}  key={i.id}/>)
                 })}
             </ul>
         </div>
