@@ -14,12 +14,19 @@ export let TaskProviderFunc = ({ children }) => {
                 return i
             }
             return i
-        })
-        UpdateListTask(updatedList)
+        });
+        UpdateListTask(updatedList);
+    };
+
+    let DeleteTaskItem = (Id) => {
+        let updatedList = ListTask.filter(i => {
+            return i.id != Id;
+        });
+        UpdateListTask(updatedList);
     };
 
     return (
-        <TaskContext.Provider value={{ListTask,UpdateListTask,ChangeStatusItem}}>
+        <TaskContext.Provider value={{ListTask,UpdateListTask,ChangeStatusItem,DeleteTaskItem}}>
             {children}
         </TaskContext.Provider>
     )

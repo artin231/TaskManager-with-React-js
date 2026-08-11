@@ -12,7 +12,7 @@ let TaskItem = ({ i, h }) => {
             </div>
             <div className="right">
                 <h1>{i.name}</h1>
-                <img className="deleteIcon" src="src/assets/red-trash-can-icon.svg" alt="" />
+                <img className="deleteIcon" onClick={() => {data.DeleteTaskItem(i.id)}} src="src/assets/red-trash-can-icon.svg" alt="" />
                 <img className="EditIcon" src="src/assets/pencil-icon-113248-512.png" alt="" />
             </div>
 
