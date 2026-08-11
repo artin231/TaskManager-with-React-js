@@ -6,6 +6,8 @@ export let TaskContext = createContext();
 
 export let TaskProviderFunc = ({ children }) => {
     let [ListTask,UpdateListTask] = useState([{id:uuidv4(),name:'برنامه نویسی',finised:false}]);
+    let [EditMode,UpdateEditMode] = useState(false);
+
 
     let ChangeStatusItem = (Id) => {
         let updatedList = ListTask.map(i => {
@@ -25,8 +27,13 @@ export let TaskProviderFunc = ({ children }) => {
         UpdateListTask(updatedList);
     };
 
+    let ChangingEditModeFunc = () => {
+        let NewEditMode = !EditMode;
+        UpdateEditMode(NewEditMode);
+    }
+
     return (
-        <TaskContext.Provider value={{ListTask,UpdateListTask,ChangeStatusItem,DeleteTaskItem}}>
+        <TaskContext.Provider value={{ListTask,UpdateListTask,ChangeStatusItem,DeleteTaskItem,EditMode,UpdateEditMode,ChangingEditModeFunc}}>
             {children}
         </TaskContext.Provider>
     )

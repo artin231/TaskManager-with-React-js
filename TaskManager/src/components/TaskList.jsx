@@ -4,8 +4,7 @@ import TaskItem from "./TaskItem";
 
 let TaskList = () => {
     let data = useContext(TaskContext);
-    console.log(data);
-    
+        
     return (
         <div className="TasksBox">
             <h1>تسک ها</h1>
