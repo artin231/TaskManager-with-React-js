@@ -162,7 +162,7 @@ header nav .logo {
 
 
 .container .TasksBox .ListOfTasks .ItemTaskList .status{
-    width: 30%;
+    width: 50%;
     display: flex;
     align-items: center;
     gap: 5%;
@@ -180,4 +180,23 @@ header nav .logo {
 
 .container .TasksBox .ListOfTasks .ItemTaskList input[type='checkbox']:checked{
     background:rgb(0, 206, 0);
+}
+
+
+.container .TasksBox .ListOfTasks .ItemTaskList .right{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 100%;
+    width: 50%;
+    padding-right: 2%;
+    gap: 20px;
+}
+.container .TasksBox .ListOfTasks .ItemTaskList .right .deleteIcon{
+    width: 40px;
+    cursor: pointer;
+}
+
+.container .TasksBox .ListOfTasks .ItemTaskList .right .EditIcon{
+    width: 60px;
 }
