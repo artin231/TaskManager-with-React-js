@@ -90,6 +90,7 @@ header nav .logo {
     align-items: center;
     backdrop-filter: blur(100%);
     gap: 20px;
+    padding-bottom: .5%;
 }
 
 .container .TasksBox:hover,
@@ -148,6 +149,7 @@ header nav .logo {
     flex-direction: column;
     padding-top: 5%;
     overflow: auto;
+    gap: 30px;
 }
 
 .container .TasksBox .ListOfTasks .ItemTaskList {
@@ -202,4 +204,13 @@ header nav .logo {
     width: 60px;
     cursor: pointer;
 
+}
+
+.container .TasksBox .ListOfTasks .ItemTaskList .right input{
+    height: 30px;
+    background-color: transparent;
+    border: 2px solid black;
+    border-radius: 10px;
+    direction: rtl;
+    outline: none;
 }

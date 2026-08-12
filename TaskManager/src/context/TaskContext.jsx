@@ -32,8 +32,13 @@ export let TaskProviderFunc = ({ children }) => {
         UpdateEditMode(NewEditMode);
     }
 
+    let AddItemToList = (ItemName) => {
+        let NewList = [...ListTask,{id:uuidv4(),name:ItemName,finised:false}];
+        UpdateListTask(NewList);
+    }
+
     return (
-        <TaskContext.Provider value={{ListTask,UpdateListTask,ChangeStatusItem,DeleteTaskItem,EditMode,UpdateEditMode,ChangingEditModeFunc}}>
+        <TaskContext.Provider value={{ListTask,UpdateListTask,ChangeStatusItem,DeleteTaskItem,EditMode,UpdateEditMode,ChangingEditModeFunc,AddItemToList}}>
             {children}
         </TaskContext.Provider>
     )
