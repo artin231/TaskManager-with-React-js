@@ -3,7 +3,11 @@ import { TaskContext } from "../context/TaskContext"
 
 let TaskItem = ({ i, h }) => {
     let data = useContext(TaskContext);
-
+    let funcCahnge = () => {
+        if (event.key == 'Enter'){
+            data.EditItem(document.getElementById('EditInput').value,i.id)
+        }
+    }
     return (
         <div className="ItemTaskList">
             <div className="status">
@@ -11,7 +15,7 @@ let TaskItem = ({ i, h }) => {
 
             </div>
             <div className="right">
-                {data.EditMode ?  <input defaultValue={i.name} />: <h1>{i.name}</h1>}
+                {data.EditMode ?  <input defaultValue={i.name} id="EditInput" onKeyDown={() => { funcCahnge()}} />: <h1>{i.name}</h1>}
                 <img className="deleteIcon" onClick={() => { data.DeleteTaskItem(i.id) }} src="src/assets/red-trash-can-icon.svg" alt="" />
                 <img className="EditIcon" onClick={() => { data.ChangingEditModeFunc() }} src="src/assets/pencil-icon-113248-512.png" alt="" />
             </div>
