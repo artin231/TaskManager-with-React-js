@@ -40,6 +40,8 @@ export let TaskProviderFunc = ({ children }) => {
     let EditItem = (NewName, id) => {
         let NewList = ListTask.map((i) => {
             if (i.id == id) {
+                console.log(i);
+                
                 i.name = NewName;
                 return i;
             }

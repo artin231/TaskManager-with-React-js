@@ -3,9 +3,14 @@ import { TaskContext } from "../context/TaskContext"
 
 let TaskItem = ({ i, h }) => {
     let data = useContext(TaskContext);
+    console.log(i);
+    
     let funcCahnge = () => {
+        let val = document.getElementById('EditInput'+i.id).value;
+
         if (event.key == 'Enter'){
-            data.EditItem(document.getElementById('EditInput').value,i.id)
+            
+            data.EditItem(val,i.id)
         }
     }
     return (
@@ -15,7 +20,7 @@ let TaskItem = ({ i, h }) => {
 
             </div>
             <div className="right">
-                {data.EditMode ?  <input defaultValue={i.name} id="EditInput" onKeyDown={() => { funcCahnge()}} />: <h1>{i.name}</h1>}
+                {data.EditMode ?  <input defaultValue={i.name} id={`EditInput${i.id}`} onKeyDown={() => { funcCahnge()}} />: <h1>{i.name}</h1>}
                 <img className="deleteIcon" onClick={() => { data.DeleteTaskItem(i.id) }} src="src/assets/red-trash-can-icon.svg" alt="" />
                 <img className="EditIcon" onClick={() => { data.ChangingEditModeFunc() }} src="src/assets/pencil-icon-113248-512.png" alt="" />
             </div>
